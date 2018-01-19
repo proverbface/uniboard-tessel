@@ -1,0 +1,32 @@
+{
+  "name": "uniboard-tessel",
+  "version": "1.0.0",
+  "description": "Tessel client for uniboard.io",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaochuancs/uniboard-tessel.git"
+  },
+  "keywords": [
+    "uniboard",
+    "tessel"
+  ],
+  "author": "Chuan Shao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaochuancs/uniboard-tessel/issues"
+  },
+  "homepage": "https://github.com/shaochuancs/uniboard-tessel#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-babili": "^0.1.4",
+    "babel-preset-env": "^1.6.1"
+  },
+  "dependencies": {
+    "mqtt": "^2.15.1"
+  }
+}
