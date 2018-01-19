@@ -1,2 +1,2 @@
 # uniboard-tessel
-Tessel client for Uniboard system
+Tessel client for uniboard.io
