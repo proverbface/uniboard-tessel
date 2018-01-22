@@ -8,7 +8,7 @@ $ npm install --save uniboard-tessel
 ```
 
 ## Usage
-To import `uniboard-tessel` module and create a client object:
+Import `uniboard-tessel` module and create a client object:
 ```js
 // Pass token when creating client object. The token is used for client authentication and can be found in Uniboard's Settings tab.
 var tesselClient = require('uniboard-tessel')('25f6db34-9ff1-47f4-b7bb-000000fb2e23');
@@ -17,7 +17,7 @@ var tesselClient = require('uniboard-tessel')('25f6db34-9ff1-47f4-b7bb-000000fb2
 var tesselClient = require('uniboard-tessel')();
 ```
 
-To send data through HTTP(S) protocol:
+Send data through HTTP(S) protocol:
 ```js
 // clientObject.http(deviceURL, dataObject, callback);
 tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6000000cb346b0b', {
@@ -33,7 +33,7 @@ tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6000000cb346b0b'
 });
 ```
 
-To send data through MQTT protocol:
+Send data through MQTT protocol:
 ```js
 tesselClient.connectMQTT();
 tesselClient.on('MQTT-connected', function() {
