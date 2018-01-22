@@ -4,7 +4,7 @@ With `uniboard-tessel`, sending data to Uniboard system through HTTP(S) or MQTT 
 
 ## Installation
 ```sh
-$ npm install uniboard-tessel
+$ npm install --save uniboard-tessel
 ```
 
 ## Usage
@@ -19,6 +19,7 @@ var tesselClient = require('uniboard-tessel')();
 
 To send data through HTTP(S) protocol:
 ```js
+// clientObject.http(deviceURL, dataObject, callback);
 tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6021211cb346b0b', {
   "temp": 21.2,
   "humidity": 29.8
@@ -36,6 +37,7 @@ To send data through MQTT protocol:
 ```js
 tesselClient.connectMQTT();
 tesselClient.on('MQTT-connected', function() {
+  // clientObject.mqtt(deviceTopic, dataObject);
   tesselClient.mqtt('/data_api/device/59db5cd3d6021211cb346b0b', {
     "temp": 21.2,
     "humidity": 29.8
