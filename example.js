@@ -4,10 +4,10 @@
 
 'use strict';
 
-let tesselClient = require('./dist/index')('25f6db34-9ff1-47f4-b7bb-3721cafb2e23');
+let tesselClient = require('./dist/index')('25f6db34-9ff1-47f4-b7bb-000000fb2e23');
 
 // Send HTTP(S) data
-tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6021211cb346b0b', {
+tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d60000000b346b0b', {
   "temp": 21,
   "humidity": 29
 }, function(err, res) {
@@ -22,7 +22,7 @@ tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6021211cb346b0b'
 // Send MQTT data
 tesselClient.connectMQTT();
 tesselClient.on('MQTT-connected', function() {
-  tesselClient.mqtt('/data_api/device/59db5cd3d6021211cb346b0b', {
+  tesselClient.mqtt('/data_api/device/59db5cd3d60000000b346b0b', {
     "temp": 33,
     "humidity": 12
   });
