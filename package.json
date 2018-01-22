@@ -1,6 +1,6 @@
 {
   "name": "uniboard-tessel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tessel client for uniboard.io",
   "main": "dist/index.js",
   "scripts": {
