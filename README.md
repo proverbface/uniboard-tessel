@@ -19,7 +19,7 @@ var tesselClient = require('uniboard-tessel')();
 
 Send data through HTTP(S) protocol:
 ```js
-// clientObject.http(deviceURL, dataObject, callback);
+// clientObject.http(<deviceURL>, <dataObject>, <callback>);
 tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6000000cb346b0b', {
   "temp": 21.2,
   "humidity": 29.8
@@ -35,9 +35,10 @@ tesselClient.http('https://uniboard.io/data_api/device/59db5cd3d6000000cb346b0b'
 
 Send data through MQTT protocol:
 ```js
+// clientObject.connectMQTT();
+// clientObject.mqtt(<deviceTopic>, <dataObject>);
 tesselClient.connectMQTT();
 tesselClient.on('MQTT-connected', function() {
-  // clientObject.mqtt(deviceTopic, dataObject);
   tesselClient.mqtt('/data_api/device/59db5cd3d6000000cb346b0b', {
     "temp": 21.2,
     "humidity": 29.8
@@ -48,4 +49,4 @@ tesselClient.on('MQTT-connected', function() {
 ## License
 (The MIT License)
 
-Copyright (c) 2016 Chuan Shao &lt;shaochuancs@gmail.com&gt;
+Copyright (c) 2017-2018 Chuan Shao &lt;shaochuancs@gmail.com&gt;
